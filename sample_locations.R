@@ -33,7 +33,7 @@ site_poly = rasterToPolygons(sample_raster, na.rm = TRUE)
 for (idx in 1:nrow(sample)){
   keeptrying <- TRUE
   while(keeptrying){
-    myMap2 <- try( get_googlemap(center = c(lon=sample[[idx,"x"]], lat=sample[[idx,"y"]]), zoom =15, maptype = "satellite"))
+    myMap2 <- try( get_googlemap(center = c(lon=sample[[idx,"x"]], lat=sample[[idx,"y"]]), zoom =16, maptype = "satellite"))
     if (class(myMap2)[1]!="try-error"){
       keeptrying <- FALSE
     }
