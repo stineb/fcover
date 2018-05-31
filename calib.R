@@ -35,7 +35,8 @@ run_sofun <- function( par, settings, return_data="cost" ){
     system( systemCall )
     
     ## SOFUN writes predicted values to file, to be read into R here
-    predicted <- read_sofun()
+    predicted <- read.fwf( "../sofun/trunk/output_calib/fapar_tmp_AU-Stp.txt", 15 )
+
     return( predicted )
   }
   
